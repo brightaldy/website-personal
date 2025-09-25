@@ -10,7 +10,7 @@ body {
 }
 
 header {
-  background: url("pexels-asadphoto-457882.jpg") center/cover no-repeat;
+  background: url("gambar/pexels-asadphoto-457882.jpg") center/cover no-repeat;
   color: white;
   text-align: center;
   padding: 4rem 0;
@@ -319,3 +319,4 @@ footer {
   color: white;
   padding: 1rem 0; 
 }
+
