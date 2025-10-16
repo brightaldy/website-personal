@@ -99,6 +99,7 @@
                   Debit (e-Wallet)
                 </label>
 
+                <!-- Pilihan e-wallet muncul jika pilih "debit" -->
                 <div
                   id="debit-options"
                   style="margin-left: 20px; display: none"
@@ -113,6 +114,30 @@
                     <input type="radio" name="debit-metode" value="gopay" />
                     GoPay
                   </label>
+                </div>
+
+                <!-- Input nomor e-wallet muncul setelah pilih e-wallet -->
+                <div
+                  id="nomor-ewallet-container"
+                  style="display: none; margin-top: 1rem"
+                >
+                  <label id="nomor-label" for="nomor-ewallet"
+                    >Masukkan nomor Anda:</label
+                  >
+                  <input
+                    type="tel"
+                    id="nomor-ewallet"
+                    name="nomor-ewallet"
+                    placeholder="Masukkan nomor telepon e-wallet"
+                    pattern="[0-9]{10,13}"
+                    style="
+                      width: 100%;
+                      padding: 0.8rem;
+                      margin-top: 0.5rem;
+                      border: 1px solid #ccc;
+                      border-radius: 5px;
+                    "
+                  />
                 </div>
               </div>
             </div>
@@ -145,16 +170,38 @@
     </footer>
 
     <script>
+      // Tampilkan opsi e-wallet saat "Debit" dipilih
       document.querySelectorAll('input[name="pembayaran"]').forEach((radio) => {
         radio.addEventListener("change", function () {
           const debitOptions = document.getElementById("debit-options");
+          const nomorEwallet = document.getElementById(
+            "nomor-ewallet-container"
+          );
+
           if (this.value === "debit") {
             debitOptions.style.display = "block";
           } else {
             debitOptions.style.display = "none";
+            nomorEwallet.style.display = "none";
           }
         });
       });
+
+      // Tampilkan input nomor saat salah satu e-wallet dipilih
+      document
+        .querySelectorAll('input[name="debit-metode"]')
+        .forEach((radio) => {
+          radio.addEventListener("change", function () {
+            const nomorContainer = document.getElementById(
+              "nomor-ewallet-container"
+            );
+            const label = document.getElementById("nomor-label");
+
+            nomorContainer.style.display = "block";
+            const selected = this.value.toUpperCase();
+            label.textContent = `Masukkan nomor ${selected} Anda:`;
+          });
+        });
     </script>
   </body>
 </html>
