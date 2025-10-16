@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pesanan - Travel Agency</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />  
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Travel Agency - Pesanan</h1>
+    </header>
+
+    <nav>
+      <div class="navigasi">
+        <div class="logo">
+          <a href="index.html">Travel Agency</a> 
+        </div>
+        <ul class="menu">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="index.html#Beranda">Destinasi</a></li>
+          <li><a href="index.html#Beranda">Paket Wisata</a></li>
+          <li><a href="index.html#kontak">Kontak</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <section class="pesanan" id="pesanan">
+        <h2>Formulir Pesanan</h2>
+        
+        <p>Silakan isi detail pesanan Anda dan pilih metode pembayaran.</p>
+        
+        <div class="pesanan-container">
+          <form action="mailto:brightpongoh18@gmail.com" method="post" enctype="text/plain">
+            <div class="form-group">
+              <label for="nama">Nama Lengkap:</label>
+              <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required />
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required />
+            </div>
+            
+            <div class="form-group">
+              <label for="paket">Paket Wisata yang Dipilih:</label>
+              <select id="paket" name="paket" required>
+                <option value="">Pilih paket</option>
+                <option value="Paket 1">Paket 1 - Rp500.000 (5 Hari, Destinasi 1)</option>
+                <option value="Paket 2">Paket 1 - Rp500.000 (5 Hari, Destinasi 2)</option>
+                <option value="Paket 3">Paket 1 - Rp500.000 (5 Hari, Destinasi 3)</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label>Metode Pembayaran:</label>
+              <div class="payment-options">
+                <label>
+                  <input type="radio" name="pembayaran" value="cash" required /> Cash (Pembayaran tunai saat kedatangan)
+                </label>
+                <label>
+                  <input type="radio" name="pembayaran" value="debit" required /> Debit (e-Wallet)
+                </label>
+                
+                <div id="debit-options" style="margin-left: 20px; display: none;">
+                  <label>
+                    <input type="radio" name="debit-metode" value="ovo" /> OVO
+                  </label>
+                  <label>
+                    <input type="radio" name="debit-metode" value="dana" /> DANA
+                  </label>
+                  <label>
+                    <input type="radio" name="debit-metode" value="gopay" /> GoPay
+                  </label>
+                </div>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="catatan">Catatan Tambahan (opsional):</label>
+              <textarea id="catatan" name="catatan" placeholder="Tulis catatan jika ada" rows="4"></textarea>
+            </div>
+            
+            <button type="submit">Kirim Pesanan</button>
+          </form>
+          
+          
+          <button onclick="window.location.href='index.html'" style="margin-top: 1rem;">Kembali</button>  
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; Bright 2025 Travel Agency</p>
+    </footer>
+
+    
+    <script>
+      document.querySelectorAll('input[name="pembayaran"]').forEach(radio => {
+        radio.addEventListener('change', function() {
+          const debitOptions = document.getElementById('debit-options');
+          if (this.value === 'debit') {
+            debitOptions.style.display = 'block';  
+          } else {
+            debitOptions.style.display = 'none';  
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
