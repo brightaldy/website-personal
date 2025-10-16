@@ -22,13 +22,13 @@ header {
 }
 
 header::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, .5)
 }
 
 header h1 {
@@ -113,9 +113,9 @@ main {
 }
 
 .Destinasi-items img {
-  width: 100%; /* Lebar 100% dari kontainer */
-  height: 200px; /* Tinggi tetap untuk keseragaman */
-  object-fit: cover; /* Gambar tidak terdistorsi */
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
   border-radius: 5px;
 }
 
@@ -140,7 +140,7 @@ button:hover {
 }
 
 .Destinasi-items p {
-  font-size: 1rem; /* Diperbaiki dari 1.5rem agar sesuai */
+  font-size: 1rem;
   margin: 0.5rem 0;
 }
 
@@ -151,7 +151,7 @@ button:hover {
   padding: 0.5rem 1rem;
   cursor: pointer;
   border-radius: 5px;
-  transition: background-color 0.3s ease; /* Perbaikan typo: backgrund-color -> background-color */
+  transition: background-color 0.3s ease;
 }
 
 .Destinasi-items button:hover {
@@ -177,9 +177,9 @@ button:hover {
 
 .paket-wisata-item {
   background-color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Diperbaiki dari 1.0 menjadi 0.1 untuk konsistensi */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   flex: 1;
-  width: calc(33.33% - 1rem); /* Perbaikan typo: calc(33,33% -> calc(33.33% */
+  width: calc(33.33% - 1rem);
   margin-bottom: 1rem;
   margin-right: 20px;
   margin-left: 20px;
@@ -193,9 +193,9 @@ button:hover {
 }
 
 .paket-wisata-item img {
-  width: 100%; /* Lebar 100% dari kontainer */
-  height: 200px; /* Tinggi tetap untuk keseragaman, diganti dari 15vh */
-  object-fit: cover; /* Gambar tidak terdistorsi */
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
   border-radius: 5px;
 }
 
@@ -217,7 +217,7 @@ button:hover {
   padding: 0.5rem 1rem;
   cursor: pointer;
   border-radius: 5px;
-  transition: background-color 0.3s ease; /* Perbaikan typo: backgrund-color -> background-color */
+  transition: background-color 0.3s ease;
 }
 
 .paket-wisata-item button:hover {
@@ -231,7 +231,7 @@ button:hover {
 }
 
 .kontak h2 {
-  font-size: 32px; /* Perbaikan typo: 32 px -> 32px */
+  font-size: 32px;
   margin-bottom: 1rem;
 }
 
@@ -275,7 +275,7 @@ button:hover {
 .kontak-form {
   flex: 1;
   background-color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Diperbaiki dari 0.5 menjadi 0.1 untuk konsistensi */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 2rem;
   border-radius: 10px;
   text-align: left;
@@ -290,8 +290,16 @@ button:hover {
   margin-bottom: 1.5rem;
 }
 
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
   width: 100%;
   padding: 1rem;
   border: 1px solid #ccc;
@@ -311,12 +319,40 @@ button[type="submit"] {
   cursor: pointer;
   border-radius: 5px;
   font-size: 1.2rem;
-  transition: background-color 0.3s ease; /* Perbaikan typo: backgrund-color -> background-color */
+  transition: background-color 0.3s ease;
 }
 
 button[type="submit"]:hover {
   background-color: #555;
   color: white;
+}
+
+.pesanan {
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.pesanan h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.pesanan-container {
+  padding: 1rem;
+}
+
+.payment-options label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.payment-options input[type="radio"] {
+  margin-right: 0.5rem;
 }
 
 footer {
