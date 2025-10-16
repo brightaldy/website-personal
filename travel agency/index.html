@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Agency</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Travel Agency</h1>
+    </header>
+
+    <nav>
+      <div class="navigasi">
+        <div class="logo">
+          <a href="#">Travel Agency</a>
+        </div>
+        <ul class="menu">
+          <li><a href="#">Beranda</a></li>
+          <li><a href="#Beranda">Destinasi</a></li>
+          <li><a href="#Beranda">Paket Wisata</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <section class="destinasi" id="Beranda">
+        <h2>Destinasi Populer</h2>
+
+        <div class="Destinasi-items">
+          <img src="ck5i6ekv3n81kh0.jpeg" alt="Pantai Pulisan" />
+          <h3>Pantai Pulisan</h3>
+          <p>
+            Pantai Pulisan terletak di Kabupaten Minahasa Utara, Sulawesi Utara,
+            tepatnya di desa Pulisan.
+          </p>
+          <button>Detail</button>
+        </div>
+
+        <div class="Destinasi-items">
+          <img src="Bukit-Savana-Pulisan-1.jpg" alt="Bukit Savana" />
+          <h3>Bukit Savana</h3>
+          <p>
+            Bukit Savana terletak di Kabupaten Minahasa Utara, Sulawesi Utara,
+            tepatnya di desa Pulisan.
+          </p>
+          <button>Detail</button>
+        </div>
+
+        <div class="Destinasi-items">
+          <img
+            src="fromandroid-e8b28569c86dceed46518bdd19b05bc3.avif"
+            alt="Pantai Paal"
+          />
+          <h3>Pantai Paal</h3>
+          <p>
+            Pantai Paal terletak di Kabupaten Minahasa Utara, Sulawesi Utara,
+            tepatnya di desa Marinsow.
+          </p>
+          <button>Detail</button>
+        </div>
+      </section>
+
+      <section class="paket-wisata">
+        <h2>Paket Wisata</h2>
+        <div class="paket-wisata-container">
+          <div class="paket-wisata-item">
+            <img src="ck5i6ekv3n81kh0.jpeg" alt="Bukit Savana Pulisan" />
+            <h3>Paket 1</h3>
+            <p><strong>Harga:</strong> Rp500.000</p>
+            <p><strong>Durasi:</strong> 5 Hari</p>
+            <p><strong>Destinasi:</strong> Destinasi 1</p>
+            <a href="pesanan.html"><button>Beli Sekarang</button></a>
+            <!-- Diubah untuk menuju halaman lain -->
+          </div>
+          <div class="paket-wisata-item">
+            <img src="Bukit-Savana-Pulisan-1.jpg" alt="Bukit Savana Pulisan" />
+            <h3>Paket 2</h3>
+            <p><strong>Harga:</strong> Rp500.000</p>
+            <p><strong>Durasi:</strong> 5 Hari</p>
+            <p><strong>Destinasi:</strong> Destinasi 2</p>
+            <a href="pesanan.html"><button>Beli Sekarang</button></a>
+            <!-- Diubah untuk menuju halaman lain -->
+          </div>
+          <div class="paket-wisata-item">
+            <img
+              src="fromandroid-e8b28569c86dceed46518bdd19b05bc3.avif"
+              alt="Bukit Savana Pulisan"
+            />
+            <h3>Paket 3</h3>
+            <p><strong>Harga:</strong> Rp500.000</p>
+            <p><strong>Durasi:</strong> 5 Hari</p>
+            <p><strong>Destinasi:</strong> Destinasi 3</p>
+            <a href="pesanan.html"><button>Beli Sekarang</button></a>
+            <!-- Diubah untuk menuju halaman lain -->
+          </div>
+        </div>
+      </section>
+      <section class="kontak" id="kontak">
+        <h2>Hubungi Kami</h2>
+        <div class="kontak-container">
+          <div class="kontak-info">
+            <div class="kontak-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="kontak-text">
+                <p>Alamat:</p>
+                <p>Kota Tomohon</p>
+              </div>
+            </div>
+            <div class="kontak-item">
+              <i class="fas fa-phone"></i>
+              <div class="kontak-text">
+                <p>Telepon:</p>
+                <p>+62 000-000-000</p>
+              </div>
+            </div>
+            <div class="kontak-item">
+              <i class="fas fa-envelope"></i>
+              <div class="kontak-text">
+                <p>Email:</p>
+                <p>brightpongoh18@gmail.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="kontak-form">
+            <h3>Kirim Pesan</h3>
+            <form>
+              <div class="form-group">
+                <input type="text" placeholder="Nama Anda" required />
+              </div>
+              <div class="form-group">
+                <input type="email" placeholder="Email Anda" required />
+              </div>
+              <div class="form-group">
+                <textarea placeholder="Pesan Anda" rows="4" required></textarea>
+              </div>
+              <button type="submit">Kirim Pesan</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; Bright 2025 Travel Agency</p>
+    </footer>
+  </body>
+</html>
